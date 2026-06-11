@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insta Link Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Insta Link Bot</h1>
+    <p>Send links automatically when users comment a keyword on your Reel.</p>
+    <a href="#setup" class="btn">Start Setup</a>
+  </header>
+
+  <section class="card">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div>User comments <b>LINK</b></div>
+      <div>Bot sends DM</div>
+      <div>Bot replies: <b>Sent ✅</b></div>
+    </div>
+  </section>
+
+  <section id="setup" class="card">
+    <h2>Campaign Setup</h2>
+
+    <label>Keyword</label>
+    <input id="keyword" placeholder="Example: LINK" />
+
+    <label>DM Message</label>
+    <textarea id="message" placeholder="Example: Here is your link: https://example.com"></textarea>
+
+    <label>Public Reply</label>
+    <input id="reply" placeholder="Example: Sent you the link ✅" />
+
+    <button onclick="saveSettings()">Save Demo Settings</button>
+
+    <p id="status"></p>
+  </section>
+
+  <section class="card warning">
+    <h2>Backend Required</h2>
+    <p>
+      This website is static and runs 24/7 on Cloudflare Pages.
+      To actually send Instagram DMs, connect a Cloudflare Worker + Meta Instagram API.
+    </p>
+  </section>
+
+  <footer>
+    <p>Made for Instagram comment automation</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
